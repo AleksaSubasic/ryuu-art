@@ -92,7 +92,7 @@
   padding-top: 3rem;
 }
 .my-bg-image{
-  background-image: url('/assets/img/my-bg-image2.png');
+  background-image: url('../assets/img/my-bg-image2.png');
   background-position: center;
 }
 .my-artwork-image{
