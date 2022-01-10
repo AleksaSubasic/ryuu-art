@@ -1,98 +1,59 @@
-window.addEventListener('DOMContentLoaded', event => {
+//My JS
 
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
+//Text color changer
+var getColor = document.getElementsByClassName('my-text-color-changer');
+var getText = document.getElementsByClassName('my-text-changer');
 
-    };
+for (let i = 0; i < getColor.length; i++) {
+    // element.style.backgroundColor = "red";
+    if(i%2!==0) {
+        getColor[i].style.color = "#ee4540";
+        getText[i].innerHTML = "Professional 2D artist.";
+    }
+    else getText[i].style.color = "#ee4540"
+}
 
-    // Shrink the navbar 
-    navbarShrink();
-
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 72,
-        });
-    };
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
+//Show more or less button
+$(document).ready(function(){
+    $(".show-more1").click(function(){
+        $(this).prev().slideToggle();
     });
-
 });
 
 
-
-
-
-
-//My JS
-
-//Show more or less button
-let showMoreButton1 = document.querySelector('.show-more1');
-let hideText1 = document.querySelector('.hide-text1');
-
-let showMoreButton2 = document.querySelector('.show-more2');
-let hideText2 = document.querySelector('.hide-text2');
-
-let showMoreButton3 = document.querySelector('.show-more3');
-let hideText3 = document.querySelector('.hide-text3');
-
-showMoreButton1.addEventListener('click',()=>{
-    hideText1.classList.toggle('show-more-active');
-})
-showMoreButton2.addEventListener('click',()=>{
-    hideText2.classList.toggle('show-more-active');
-})
-showMoreButton3.addEventListener('click',()=>{
-    hideText3.classList.toggle('show-more-active');
-})
-
-//Time
-// let dateJS = new Date();
-// let hour = dateJS.getHours();
-// let min = dateJS.getMinutes();
-// let time = document.querySelector('#time');
-// time = document.write(`${hour} : ${min}`);
-
-//Time YouTube
+// //TimeZone - Belgrade - Chicago
 var getBelgradeTime = function(){
     document.getElementById("belgradeTime").innerHTML = new Date().toLocaleString("en-US", {timeZone:'Europe/Belgrade', timeStyle:'short', hourCycle:'h12'});;
 }
 setInterval(getBelgradeTime, 1000);
 getBelgradeTime();
-
 var getChicagoTime = function(){
     document.getElementById("chicagoTime").innerHTML = new Date().toLocaleString("en-US", {timeZone:'America/Chicago', timeStyle:'short', hourCycle:'h12'});;
 }
 setInterval(getChicagoTime, 1000);
 getChicagoTime();
 
+//Dynamic Form
+// var myForm = document.querySelector('#my-form');
+// myForm.innerHTML = "<form> <select> <option value='--choose--'>--choose--</option>";
+// myFormArray = ['A', 'B', 'C', 'D'];
+// for (let i = 0; i < myFormArray.length; i++) {
+//     myForm.innerHTML= `<option value='${myFormArray[i]}'>${myFormArray[i]}</option>`;
+// }
+// myForm.innerHTML = "</select> </form>";
 
 
+// document.write("<form> <select> <option value='--choose--'>--choose--</option>");
+// myFormArray = ['A', 'B', 'C', 'D'];
+// for (let i = 0; i < myFormArray.length; i++) {
+//     document.write(`<option value='${myFormArray[i]}'>${myFormArray[i]}</option>`);
+// }
+// document.write("</select> </form>");
+
+// var regexIme = /^[A-Z][a-z]{2,15}$/;
+// var regexPrezime = /^[A-Z][a-z]{2,15}$/;
+// var regexEmail = /^[a-z]+[\.\-\_\!a-z\d]*\@[a-z]{2,10}(\.[a-z]{2,3}){1,2}$/;
+// var regexConfirmEmail = /^[a-z]+[\.\-\_\!a-z\d]*\@[a-z]{2,10}(\.[a-z]{2,3}){1,2}$/;
 
 
 //Forms
@@ -117,9 +78,6 @@ getChicagoTime();
 //     document.write("<option>" + niz[i] +"</option>");
 // }
 // document.write("</select> </form>");
-
-
-
 
 //Kojic
 // function provera(){
