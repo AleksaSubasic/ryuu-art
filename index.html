@@ -16,7 +16,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/lightbox.min.css" rel="stylesheet" />
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -56,59 +56,53 @@
                 <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead my-text-justify">Ryuu-art is made of a team with remarkable people. Founded in 2003, Ryuu-art's main goal is to spread the wonderful power of creativity and help our clients achieve what they need.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead my-text-justify">Ryuu-art was made with a team of remarkable people. Founded in 2003, Ryuu-art's main goal is to spread the wonderful power of creativity and help our clients achieve what they need.</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead my-text-justify">Ryuu-art is made of a team with remarkable people. Founded in 2003, Ryuu-art's main goal is to spread the wonderful power of creativity and help our clients achieve what they <span class="my-txt-underline">need</span>.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead my-text-justify">If you're looking for a professional unique, modern, creative and minimalist design, you've come to the right place. We are looking forward to working with you!</p></div>
                 </div>
                 <!-- Carousel Content -->
                 <div class="row">
                     <div class="col-lg-4 mx-auto"><h2 class="page-section-heading text-uppercase text-center my-pad-3">Our staff:</h2></div>
                 </div>
-                <div id="carouselExampleDark" class="carousel carousel-dark slide my-carousel mx-auto" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 0"></button>
-                    </div>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="assets/img/staff/Jason.jpg" class="d-block " alt="jason.jpg">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5 class="my-red-2">Jason</h5>
-                          <p class="my-red-3">Professional 2D artist.</p>
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="assets/img/staff/Mendesh.jpg" class="d-block" alt="Mendesh.jpg">
+                            <div class="carousel-caption">
+                                <h2 class="my-text-color-changer">Mendesh</h2>
+                                <p class="my-text-bold my-text-changer">Professional 3D artist.</p>
+                            </div>
                         </div>
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img src="assets/img/staff/John.jpg" class="d-block " alt="john.jpg">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5 class="my-red-2">John</h5>
-                          <p class="my-red-3">Professional 3D artist.</p>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="assets/img/staff/Nick.jpg" class="d-block" alt="Nick.jpg">
+                            <div class="carousel-caption">
+                                <h2 class="my-text-color-changer">Nick</h2>
+                                <p class="my-text-bold my-text-changer">Professional 3D artist.</p>
+                            </div>
                         </div>
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img src="assets/img/staff/Jessica.jpg" class="d-block " alt="jessica.jpg">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5 class="my-red-2">Jessica</h5>
-                          <p class="my-red-3">Professional 2D artist.</p>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="assets/img/staff/John.jpg" class="d-block" alt="John.jpg">
+                            <div class="carousel-caption">
+                                <h2 class="my-text-color-changer">John</h2>
+                                <p class="my-text-bold my-text-changer">Professional 3D artist.</p>
+                            </div>
                         </div>
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img src="assets/img/staff/Kali.jpg" class="d-block " alt="kali.jpg">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5 class="my-red-2">Kali</h5>
-                          <p class="my-red-3">Professional 3D artist.</p>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="assets/img/staff/Maria.jpg" class="d-block" alt="Maria.jpg">
+                            <div class="carousel-caption">
+                                <h2 class="my-text-color-changer">Maria</h2>
+                                <p class="my-text-bold my-text-changer">Professional 3D artist.</p>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                </div>
             </div>
         </section>
 
@@ -123,24 +117,25 @@
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto">
                             <img class="img-fluid" src="assets/img/my-card-image-1.png" alt="my-card-image-1" />
-                            <span class="hide-text1">In every package you will have intereaction with the team, whether that be online or in person. Basic package will get you 5 artworks. <br/>Price&#58; 35&dollar;</span>
+                            <div class="hide-text1">In every package you will have intereaction with the team, whether that be online or in person. Basic package will get you 5 artworks. <br/>Price&#58; 35&dollar;</div>
                             <button class="show-more1 text-uppercase">basic</button>
+                            <!-- <input type="button" class="show-more1 text-uppercase" value="Show more"> -->
                         </div>
                     </div>
                     <!-- Card Item 2-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" >
                             <img class="img-fluid" src="assets/img/my-card-image-2.png" alt="my-card-image-2" />
-                            <span class="hide-text2">In every package you will have intereaction with the team, whether that be online or in person. Standard package will get you 15 artworks.<br/>Price&#58; 85&dollar;</span>
-                            <button class="show-more2 text-uppercase">standard</button>
+                            <div class="hide-text1">In every package you will have intereaction with the team, whether that be online or in person. Standard package will get you 15 artworks.<br/>Price&#58; 85&dollar;</div>
+                            <button class="show-more1 text-uppercase">standard</button>
                         </div>
                     </div>
                     <!-- Card Item 3-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto">
                             <img class="img-fluid" src="assets/img/my-card-image-3.png" alt="my-card-image-3" />
-                            <span class="hide-text3">In every package you will have intereaction with the team, whether that be online or in person. Premium package will get you 50 artworks, and a special gift from us. <br/>Price&#58; 250&dollar;</span>
-                            <button class="show-more3 text-uppercase">premium</button>
+                            <div class="hide-text1">In every package you will have intereaction with the team, whether that be online or in person. Premium package will get you 50 artworks, and a special gift from us. <br/>Price&#58; 250&dollar;</div>
+                            <button class="show-more1 text-uppercase">premium</button>
                         </div>
                     </div>
                 </div>
@@ -260,7 +255,7 @@
                             </div> -->
                             <!-- <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div> -->
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
                         </form>
                     </div>
                 </div>
