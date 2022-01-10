@@ -60,14 +60,23 @@
   --bs-my-red-clr5: #ee4540;
 }
 /* My css */
-.my-red-5{
-  color: var(--bs-my-red-clr5);
+.my-red-1{
+  color: var(--bs-my-red-clr1);
 }
 .my-red-2{
   color: var(--bs-my-red-clr2);
 }
-.my-red-1{
-  color: var(--bs-my-red-clr1);
+.my-red-3{
+  color: var(--bs-my-red-clr3);
+}
+.my-red-4{
+  color: var(--bs-my-red-clr4);
+}
+.my-red-5{
+  color: var(--bs-my-red-clr5);
+}
+.my-text-bold{
+  font-weight: bold;
 }
 .my-h4{
   font-size: 1.5rem;
@@ -120,8 +129,51 @@
     width: 65%;
   }
 }
-
-
+.hide-text1{
+  display: none;
+  background-color: var(--bs-my-red-clr1);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  text-align: justify;
+}
+.show-more1{
+  width: 100%;
+  height: 50px;
+  background-color: var(--bs-my-red-clr5);
+  color: var(--bs-my-red-clr1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  transition: 0.2s;
+  border-radius: 0 0 0.5rem 0.5rem;
+  outline: none;
+  border: none;
+}
+#my-box{
+  width: 500px;
+  height: 600px;
+  background-color: #000;
+}
+.carousel-item img{
+  width: 35%;
+  margin: 0px auto;
+}
+@media (max-width: 576px){
+  .carousel-item img{
+    width: 100%;
+  }
+}
+.my-text-color-changer{
+  color: #fff;
+}
+.my-text-changer{
+  color: #fff;
+  font-size: 1.10rem;
+}
 
 /* My css */
 
@@ -729,7 +781,7 @@ progress {
 }
 .row {
   --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
+  --bs-gutter-y: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
@@ -11554,83 +11606,6 @@ html {
 }
 .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
   font-size: 1.5rem;
-}
-
-.show-more1{
-  width: 100%;
-  height: 50px;
-  background-color: var(--bs-my-red-clr5);
-  color: var(--bs-my-red-clr1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 0.5rem;
-  transition: 0.2s;
-  border-radius: 0 0 0.5rem 0.5rem;
-  outline: none;
-  border: none;
-}
-.show-more2{
-  width: 100%;
-  height: 50px;
-  background-color: var(--bs-my-red-clr5);
-  color: var(--bs-my-red-clr1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 0.5rem;
-  transition: 0.2s;
-  border-radius: 0 0 0.5rem 0.5rem;
-  outline: none;
-  border: none;
-}
-.show-more3{
-  width: 100%;
-  height: 50px;
-  background-color: var(--bs-my-red-clr5);
-  color: var(--bs-my-red-clr1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 0.5rem;
-  transition: 0.2s;
-  border-radius: 0 0 0.5rem 0.5rem;
-  outline: none;
-  border: none;
-}
-
-.hide-text1{
-  display: none;
-  background-color: var(--bs-my-red-clr1);
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-  text-align: justify;
-}
-.hide-text2{
-  display: none;
-  background-color: var(--bs-my-red-clr1);
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-  text-align: justify;
-}
-.hide-text3{
-  display: none;
-  background-color: var(--bs-my-red-clr1);
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-  text-align: justify;
-}
-.show-more-active{
-  display: block;
 }
 
 /*----------PORTFOLIO MODAL CHANGES----------*/
