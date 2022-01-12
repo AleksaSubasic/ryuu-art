@@ -5,8 +5,7 @@ var getColor = document.getElementsByClassName('my-text-color-changer');
 var getText = document.getElementsByClassName('my-text-changer');
 
 for (let i = 0; i < getColor.length; i++) {
-    // element.style.backgroundColor = "red";
-    if(i%2!==0) {
+    if(i%2!=0) {
         getColor[i].style.color = "#ee4540";
         getText[i].innerHTML = "Professional 2D artist.";
     }
@@ -15,11 +14,10 @@ for (let i = 0; i < getColor.length; i++) {
 
 //Show more or less button
 $(document).ready(function(){
-    $(".show-more1").click(function(){
+    $(".show-more").click(function(){
         $(this).prev().slideToggle();
     });
 });
-
 
 // //TimeZone - Belgrade - Chicago
 var getBelgradeTime = function(){
@@ -33,87 +31,68 @@ var getChicagoTime = function(){
 setInterval(getChicagoTime, 1000);
 getChicagoTime();
 
-//Dynamic Form
-// var myForm = document.querySelector('#my-form');
-// myForm.innerHTML = "<form> <select> <option value='--choose--'>--choose--</option>";
-// myFormArray = ['A', 'B', 'C', 'D'];
-// for (let i = 0; i < myFormArray.length; i++) {
-//     myForm.innerHTML= `<option value='${myFormArray[i]}'>${myFormArray[i]}</option>`;
+//Dynamic modal
+
+//Button 1
+var getIdButton1 = document.getElementById('dbtn1');
+var dynamicButton1 = `<button type="button" class="my-red-button my-buy-button" data-bs-toggle="modal" data-bs-target="#dtbn1-modal"> Buy </button>`
+getIdButton1.innerHTML = dynamicButton1;
+//Modal Form 1
+
+
+
+//Button 2
+var getIdButton2 = document.getElementById('dbtn2');
+var dynamicButton2 = `<button type="button" class="my-red-button my-buy-button" data-bs-toggle="modal" data-bs-target="#dtbn2-modal"> Buy </button>`
+getIdButton2.innerHTML = dynamicButton2;
+//Modal Form 2
+
+//Button 3
+var getIdButton3 = document.getElementById('dbtn3');
+var dynamicButton3 = `<button type="button" class="my-red-button my-buy-button" data-bs-toggle="modal" data-bs-target="#dtbn3-modal"> Buy </button>`
+getIdButton3.innerHTML = dynamicButton3;
+//Modal Form 3
+
+
+//Dynamic Form and Regular Expression
+
+//Name
+var dynamicLabel1 = `<label for="dynamicInputName" class="form-label"> <p class="my-form-p">Your name:</p> </label>`;
+var dynamicName = `<input type="text" class="form-control" id="dynamicInputName"/>`;
+dynamicLabel1 += dynamicName;
+var getIdTel = document.getElementById('dynamicName');
+getIdTel.innerHTML = dynamicLabel1;
+
+//Email
+var dynamicLabel2 = `<label for="dynamicInputEmail" class="form-label"> <p class="my-form-p">Your email:</p> </label>`;
+var dynamicEmail = `<input type="email" class="form-control" id="dynamicInputEmail"/>`;
+dynamicLabel2 += dynamicEmail;
+var getIdTel = document.getElementById('dynamicEmail');
+getIdTel.innerHTML = dynamicLabel2;
+
+//Telephone
+var dynamicLabel3 = `<label for="dynamicInputTel" class="form-label"> <p class="my-form-p">Your phone number:</p> </label>`;
+var dynamicTel = `<input type="tel" class="form-control" id="dynamicInputTel"/>`;
+dynamicLabel3 += dynamicTel;
+var getIdTel = document.getElementById('dynamicTel');
+getIdTel.innerHTML = dynamicLabel3;
+
+//Select
+// var dynamicLabel4 = `<label for="dynamicInputSelect" class="form-label"> Choose your package of choice below: </label>`;
+// var dynamicSelect = `<select id="dynamicInputSelect" class="form-select"> <option value="defaultChoose"> --choose-- </option>`;
+// var dynamicSelectArray = ["Basic", "Standard", "Premium"];
+// for (let i = 0; i < dynamicSelectArray.length; i++) {
+//     dynamicSelect += (`<option value="${dynamicSelectArray[i]}"> ${dynamicSelectArray[i]} </option>`);
 // }
-// myForm.innerHTML = "</select> </form>";
+// dynamicSelect += `</option> </select>`;
+// dynamicLabel4 += dynamicSelect;
+// var getIdSelect = document.getElementById('dynamicSelect');
+// getIdSelect.innerHTML = dynamicLabel4;
 
-
-// document.write("<form> <select> <option value='--choose--'>--choose--</option>");
-// myFormArray = ['A', 'B', 'C', 'D'];
-// for (let i = 0; i < myFormArray.length; i++) {
-//     document.write(`<option value='${myFormArray[i]}'>${myFormArray[i]}</option>`);
-// }
-// document.write("</select> </form>");
-
+//Regular Expression
 // var regexIme = /^[A-Z][a-z]{2,15}$/;
 // var regexPrezime = /^[A-Z][a-z]{2,15}$/;
 // var regexEmail = /^[a-z]+[\.\-\_\!a-z\d]*\@[a-z]{2,10}(\.[a-z]{2,3}){1,2}$/;
 // var regexConfirmEmail = /^[a-z]+[\.\-\_\!a-z\d]*\@[a-z]{2,10}(\.[a-z]{2,3}){1,2}$/;
 
-
-//Forms
-//DDL
-// function ddlCheck(){
-//     let optionAll = lista.options;
-//     if(optionAll.selectedIndex == 0){
-//         alert("You must choose package!!!");
-//     }
-
-//     //or
-
-//     let optionAll = lista.options;
-//     if(lista.options.selectedIndex == 0){
-//         alert("You must choose package!!!");
-//     }
-// }
-// //DDL - dinamicko ispisivanje
-// document.write("<form> <select id='lista'> <option>Izaberite</option>");
-// var niz = new Array("A", "B", "C");
-// for (let i = 0; i < niz.length; i++) {
-//     document.write("<option>" + niz[i] +"</option>");
-// }
-// document.write("</select> </form>");
-
-//Kojic
-// function provera(){
-// 	console.log("Kliknuto na taster tipa submit");
-// 	//E je f-jo neko ceka od tebe da mu nesto vratis!!!
-	
-// 	//Dohvatanje podataka iz FORME koja je u HTML-u
-// 	//Rad za text poljima - value
-	
-// 	//var textPolje = document.formular1.NameIme;
-// 	var textPolje1 = IdIme.value;
-// 	console.log(textPolje1);
-	
-// 	var textPolje2 = IdPrezime.value;
-// 	console.log("Uneti text ovog polja je " + textPolje2);
-	
-// 	var textPolje21 = IdPrezime.id;
-// 	console.log("ID ovog polja je " + textPolje21);
-	
-// 	// X = Y
-// 	IdPrezime.value = "Ovo je moj text iz JS";
-	
-// 	if(textPolje1.length < 3){
-// 		console.log("Nece moci jer nije dovoljno dugo prezime ");
-// 		infoIme.classList.add("mojaKlasa");
-// 		infoIme.innerHTML = "Niste dobro uneli ime i mora biti bar 3 karaktera!!!";
-// 		return false;
-// 	}
-// 	else{
-// 		infoIme.classList.remove("mojaKlasa");
-// 		infoIme.innerHTML = "Odlicno!!!";
-// 		return false;
-// 	}
-	
-	
-// 	//Odluka sta cemo da vratimo kao return ce biti bazirana na proveri da li je korisnicki sadrzaj dobar ili ne!!!
-// 	//return false;
-// }
 //My JS
