@@ -110,32 +110,73 @@
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Card Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">What do you <span class="my-txt-underline">need</span>?</h2>
+                <h2 class="page-section-heading text-center text-uppercase my-heading mb-0">What do you <span class="my-txt-underline">need</span>?</h2>
                 <!-- Card Grid Items-->
                 <div class="row justify-content-center">
                     <!-- Card Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto">
                             <img class="img-fluid" src="assets/img/my-card-image-1.png" alt="my-card-image-1" />
-                            <div class="hide-text1">In every package you will have intereaction with the team, whether that be online or in person. Basic package will get you 5 artworks. <br/>Price&#58; 35&dollar;</div>
-                            <button class="show-more1 text-uppercase">basic</button>
-                            <!-- <input type="button" class="show-more1 text-uppercase" value="Show more"> -->
+                            <div class="hide-text">In every package you will have intereaction with the team, whether that be online or in person. Basic package will get you 5 artworks. <br/>Price&#58; 35&dollar;
+                                <!-- Dynamic button 1 -->
+                                <div id="dbtn1" class="dynamicButton"></div>
+                            </div>
+                            <button class="show-more text-uppercase">basic</button>
+                            <!-- Modal 1 -->
+                            <div class="modal fade" id="dtbn1-modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="my-modal-body">
+                                        <h4>Your item has been successfully added to the cart!</h4>
+                                        <button type="button" class="my-red-button my-buy-button my-modal-button" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Card Item 2-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" >
                             <img class="img-fluid" src="assets/img/my-card-image-2.png" alt="my-card-image-2" />
-                            <div class="hide-text1">In every package you will have intereaction with the team, whether that be online or in person. Standard package will get you 15 artworks.<br/>Price&#58; 85&dollar;</div>
-                            <button class="show-more1 text-uppercase">standard</button>
+                            <div class="hide-text">In every package you will have intereaction with the team, whether that be online or in person. Standard package will get you 15 artworks.<br/>Price&#58; 85&dollar;
+                                <!-- Dynamic button 2 -->
+                                <div id="dbtn2" class="dynamicButton"></div>
+                            </div>
+                            <button class="show-more text-uppercase">standard</button>
+                            <!-- Modal 2 -->
+                            <div class="modal fade" id="dtbn2-modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="my-modal-body">
+                                        <h4>Your item has been successfully added to the cart!</h4>
+                                        <button type="button" class="my-red-button my-buy-button my-modal-button" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Card Item 3-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto">
                             <img class="img-fluid" src="assets/img/my-card-image-3.png" alt="my-card-image-3" />
-                            <div class="hide-text1">In every package you will have intereaction with the team, whether that be online or in person. Premium package will get you 50 artworks, and a special gift from us. <br/>Price&#58; 250&dollar;</div>
-                            <button class="show-more1 text-uppercase">premium</button>
+                            <div class="hide-text">In every package you will have intereaction with the team, whether that be online or in person. Premium package will get you 50 artworks, and a special gift from us. <br/>Price&#58; 250&dollar; 
+                                <!-- Dynamic button 3 -->
+                                <div id="dbtn3" class="dynamicButton"></div>
+                            </div>
+                            <button class="show-more text-uppercase">premium</button>
+                            <!-- Modal 3 -->
+                            <div class="modal fade" id="dtbn3-modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="my-modal-body">
+                                        <h4>Your item has been successfully added to the cart!</h4>
+                                        <button type="button" class="my-red-button my-buy-button my-modal-button" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,47 +256,21 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Us</h2>
+                <h2 class="page-section-heading text-center text-uppercase my-heading mb-0">Contact Us</h2>
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <!-- <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div> -->
+                        <form action="neki.php" method="post">
+                            <div id="dynamicName" class="mb-3">
+                                <!-- Dynamic -->
                             </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <!-- <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div> -->
-                                <!-- <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div> -->
+                            <div id="dynamicEmail" class="mb-3">
+                                <!-- Dynamic -->
                             </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <!-- <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div> -->
+                            <div id="dynamicTel" class="mb-3">
+                                <!-- Dynamic -->
                             </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <!-- <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div> -->
-                            </div>
-                            <!-- <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div> -->
-                            <!-- <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div> -->
-                            <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
+                            <button type="submit" class="my-red-button my-submit-button">Send</button>
                         </form>
                     </div>
                 </div>
