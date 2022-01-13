@@ -176,11 +176,14 @@
   }
 }
 .my-text-color-changer{
-  color: #fff;
+  color: var(--bs-my-red-clr5);
 }
-.my-text-changer{
-  color: #fff;
+.changeP{
   font-size: 1.10rem;
+}
+.errorMessage{
+  color: var(--bs-my-red-clr5);
+    font-size: 1.3rem;
 }
 .my-red-button{
   outline: none;
