@@ -65,6 +65,10 @@ dynamicLabel3 += dynamicTel;
 var getIdTel = document.getElementById('dynamicTel');
 getIdTel.innerHTML = dynamicLabel3;
 
+
+
+
+// Form regex
 document.getElementById("my-form-submit").addEventListener("click",function(e){
     e.preventDefault();
     //Get input
@@ -123,16 +127,109 @@ var getChicagoTime = function(){
 setInterval(getChicagoTime, 1000);
 getChicagoTime();
 
-//Select
-// var dynamicLabel4 = `<label for="dynamicInputSelect" class="form-label"> Choose your package of choice below: </label>`;
-// var dynamicSelect = `<select id="dynamicInputSelect" class="form-select"> <option value="defaultChoose"> --choose-- </option>`;
-// var dynamicSelectArray = ["Basic", "Standard", "Premium"];
-// for (let i = 0; i < dynamicSelectArray.length; i++) {
-//     dynamicSelect += (`<option value="${dynamicSelectArray[i]}"> ${dynamicSelectArray[i]} </option>`);
-// }
-// dynamicSelect += `</option> </select>`;
-// dynamicLabel4 += dynamicSelect;
-// var getIdSelect = document.getElementById('dynamicSelect');
-// getIdSelect.innerHTML = dynamicLabel4;
+//Dynamic artworks
+//Names: Mendesh, Nick, John, Maria
+var getArtworkArray=[
+    {
+        biggerArtwork: "assets/img/artworks/artwork-1.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-1-small.png",
+        titleArtwork: "Simple logo by Nick",
+        altArtwork: "artwork-1"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-2.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-2-small.png",
+        titleArtwork: "ART logo by John",
+        altArtwork: "artwork-2"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-3.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-3-small.png",
+        titleArtwork: "Abstract Eve by Maria",
+        altArtwork: "artwork-3"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-4.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-4-small.png",
+        titleArtwork: "Green/White Scales by Mendesh",
+        altArtwork: "artwork-4"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-5.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-5-small.png",
+        titleArtwork: "Abstract Colors by Maria",
+        altArtwork: "artwork-5"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-6.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-6-small.png",
+        titleArtwork: "3D cube by Nick",
+        altArtwork: "artwork-6"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-7.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-7-small.png",
+        titleArtwork: "3D circles by John",
+        altArtwork: "artwork-7"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-8.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-8-small.png",
+        titleArtwork: "Gameboy by Maria",
+        altArtwork: "artwork-8"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-9.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-9-small.png",
+        titleArtwork: "Red doors by Maria",
+        altArtwork: "artwork-9"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-10.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-10-small.png",
+        titleArtwork: "Iceberg by Mendesh",
+        altArtwork: "artwork-10"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-11.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-11-small.png",
+        titleArtwork: "Abstract Metalic by John",
+        altArtwork: "artwork-11"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-12.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-12-small.png",
+        titleArtwork: "Abstract Pink by Mendesh",
+        altArtwork: "artwork-12"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-13.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-13-small.png",
+        titleArtwork: "3D Slices by Mendesh",
+        altArtwork: "artwork-13"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-14.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-14-small.png",
+        titleArtwork: "Illusion by Maria",
+        altArtwork: "artwork-14"
+    },
+    {
+        biggerArtwork: "assets/img/artworks/artwork-15.jpg",
+        smallerArtwork: "assets/img/artworks/artwork-15-small.png",
+        titleArtwork: "Watercolor Fireball by Nick",
+        altArtwork: "artwork-15"
+    },
+];
 
+var artworkDisplay = "";
+var getDynamicRow = document.getElementById("dynamicRow");
+getArtworkArray.forEach(function(artwork){
+    artworkDisplay += `<div class="col-lg-4 my-artwork-image">
+     <a href="${artwork.biggerArtwork}" data-lightbox="mygallery" data-title="${artwork.titleArtwork}">
+         <img src="${artwork.smallerArtwork}" alt="${artwork.altArtwork}">
+     </a>
+</div>`
+});
+getDynamicRow.innerHTML = artworkDisplay;
 //My JS
