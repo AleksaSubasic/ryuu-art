@@ -65,7 +65,11 @@ dynamicLabel3 += dynamicTel;
 var getIdTel = document.getElementById('dynamicTel');
 getIdTel.innerHTML = dynamicLabel3;
 
-
+//Success or Error message
+var successChecker = 0;
+var getDynamicMessage = document.getElementById('dynamicMessage');
+var displaySuccessMessage = "<p class='successMessage'>Form is completed.</p>";
+var displayErrorMessage = "<p class='errorMessage'>You must complete the form first.</p>";
 
 
 // Form regex
@@ -90,29 +94,58 @@ document.getElementById("my-form-submit").addEventListener("click",function(e){
     //getName
     if(getName==""){
         getNameError.innerHTML = "Name field is required.";
+        successChecker = 0;
     }
     else if(!regexName.test(getName)){
         getNameError.innerHTML = "Name field must be valid.";
+        successChecker = 0;
     }
-    else getNameError.innerHTML = "";
+    else{
+        getNameError.innerHTML = "";
+        successChecker++;
+    }
 
     //getEmail
     if(getEmail==""){
         getEmailError.innerHTML = "Email field is required.";
+        successChecker = 0;
     }
     else if(!regexEmail.test(getEmail)){
         getEmailError.innerHTML = "Email field must be valid.";
+        successChecker = 0;
     }
-    else getEmailError.innerHTML = "";
+    else {
+        getEmailError.innerHTML = "";
+        successChecker++;
+    }
 
     //getTel
     if(getTel==""){
         getTelError.innerHTML = "Phone field is required.";
+        successChecker = 0;
     }
     else if(!regexTel.test(getTel)){
         getTelError.innerHTML = "Phone field must be valid.";
+        successChecker = 0;
     }
-    else getTelError.innerHTML = "";
+    else{
+        getTelError.innerHTML = "";
+        successChecker++;
+    }
+
+    //display successMessage or errorMessage
+    if(successChecker >= 3){
+        getDynamicMessage.innerHTML = displaySuccessMessage;
+
+        setTimeout(function(){
+            var timeoutMessage = getDynamicMessage;
+            timeoutMessage.parentNode.removeChild(timeoutMessage);
+        }, 3000);
+    }
+    else{
+        getDynamicMessage.innerHTML = displayErrorMessage;
+    }
+    
 });
 
 //TimeZone - Belgrade - Chicago
