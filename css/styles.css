@@ -183,7 +183,11 @@
 }
 .errorMessage{
   color: var(--bs-my-red-clr5);
-    font-size: 1.3rem;
+  font-size: 1.3rem;
+}
+.successMessage{
+  color: var(--bs-primary);
+  font-size: 1.3rem;
 }
 .my-red-button{
   outline: none;
