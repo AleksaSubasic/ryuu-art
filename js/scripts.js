@@ -136,11 +136,6 @@ document.getElementById("my-form-submit").addEventListener("click",function(e){
     //display successMessage or errorMessage
     if(successChecker >= 3){
         getDynamicMessage.innerHTML = displaySuccessMessage;
-
-        setTimeout(function(){
-            var timeoutMessage = getDynamicMessage;
-            timeoutMessage.parentNode.removeChild(timeoutMessage);
-        }, 3000);
     }
     else{
         getDynamicMessage.innerHTML = displayErrorMessage;
