@@ -189,6 +189,9 @@
   color: var(--bs-primary);
   font-size: 1.3rem;
 }
+.my-display-none{
+  display: none;
+}
 .my-red-button{
   outline: none;
   border: none;
