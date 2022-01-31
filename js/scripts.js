@@ -23,19 +23,40 @@ $(document).ready(function(){
 
 //Dynamic modal
 //Button 1
+var getDynamicSelectedItem = document.getElementById("selected-item");
+var dynamicSelectedItemMessage = "<p class='selected-item-p text-white'>You didn't add anything to the cart yet!</p>";
+getDynamicSelectedItem.innerHTML = dynamicSelectedItemMessage;
+var buttonIsClicked = 0;
+
 var getIdButton1 = document.getElementById('dbtn1');
 var dynamicButton1 = `<button type="button" class="my-red-button my-buy-button" data-bs-toggle="modal" data-bs-target="#dtbn1-modal"> Buy </button>`
 getIdButton1.innerHTML = dynamicButton1;
 
+$('#dbtn1').click(function () {
+    getDynamicSelectedItem.innerHTML = "<img class='selected-item-image' src='assets/img/my-card-image-1.png' alt='my-card-image-1'/>"
+    getSelectedItemH3.innerHTML = "You have selected basic.";
+});
+
 //Button 2
 var getIdButton2 = document.getElementById('dbtn2');
-var dynamicButton2 = `<button type="button" class="my-red-button my-buy-button" data-bs-toggle="modal" data-bs-target="#dtbn2-modal"> Buy </button>`
+var getSelectedItemH3 = document.getElementById('selected-item-h3');
+var dynamicButton2 = `<button type="button" class="my-red-button my-buy-button" data-bs-toggle="modal" data-bs-target="#dtbn2-modal"> Buy </button>`;
 getIdButton2.innerHTML = dynamicButton2;
+
+$('#dbtn2').click(function () {
+    getDynamicSelectedItem.innerHTML = "<img class='selected-item-image' src='assets/img/my-card-image-2.png' alt='my-card-image-1'/>";
+    getSelectedItemH3.innerHTML = "You have selected standard.";
+});
 
 //Button 3
 var getIdButton3 = document.getElementById('dbtn3');
-var dynamicButton3 = `<button type="button" class="my-red-button my-buy-button" data-bs-toggle="modal" data-bs-target="#dtbn3-modal"> Buy </button>`
+var dynamicButton3 = `<button type="button" class="my-red-button my-buy-button" data-bs-toggle="modal" data-bs-target="#dtbn3-modal"> Buy </button>`;
 getIdButton3.innerHTML = dynamicButton3;
+
+$('#dbtn3').click(function () {
+    getDynamicSelectedItem.innerHTML = "<img class='selected-item-image' src='assets/img/my-card-image-3.png' alt='my-card-image-1'/>"
+    getSelectedItemH3.innerHTML = "You have selected premium.";
+});
 
 //Dynamic Form
 //Name
@@ -68,8 +89,14 @@ getIdTel.innerHTML = dynamicLabel3;
 //Success or Error message
 var successChecker = 0;
 var getDynamicMessage = document.getElementById('dynamicMessage');
-var displaySuccessMessage = "<p class='successMessage'>Form is completed.</p>";
+var displaySuccessMessage = "<p class='successMessage'>Form is successfully completed.</p>";
 var displayErrorMessage = "<p class='errorMessage'>You must complete the form first.</p>";
+
+//Form reset button edit
+$('#my-form-reset').click(function () {
+    getDynamicSelectedItem.innerHTML = dynamicSelectedItemMessage;
+    getSelectedItemH3.innerHTML = "Your selected item: ";
+});
 
 
 // Form regex
