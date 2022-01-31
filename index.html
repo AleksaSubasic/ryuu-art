@@ -18,7 +18,8 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet"/>
-        <link href="css/lightbox.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/my_style.css"/>
+        <link rel="stylesheet" href="css/lightbox.min.css"/>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
     <body id="page-top">
@@ -59,7 +60,7 @@
                 <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead my-text-justify">Ryuu-art is made of a team with remarkable people. Founded in 2003, Ryuu-art's main goal is to spread the wonderful power of creativity and help our clients achieve what they <span class="my-txt-underline">need</span>.</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead my-text-justify">Ryuu-art is made of a team with remarkable people. Founded in 2003, Ryuu-art's main goal is to spread the wonderful power of creativity and help our clients achieve what they <a href="#portfolio" class="my-txt-underline">need</a>.</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead my-text-justify">If you're looking for a professional unique, modern, creative and minimalist design, you've come to the right place. We are looking forward to working with you!</p></div>
                 </div>
                 <!-- Carousel Content -->
@@ -205,7 +206,7 @@
                 <h2 class="page-section-heading text-center text-uppercase my-heading mb-0">Contact Us</h2>
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
+                    <div class="col-lg-4 col-xl-7">
                         <form id="my-form" action="neki.php" method="GET">
                             <div id="dynamicName" class="mb-3">
                                 <!-- Dynamic -->
@@ -217,11 +218,18 @@
                                 <!-- Dynamic -->
                             </div>
                             <button type="submit" id="my-form-submit" class="my-red-button my-submit-button">Send</button>
-                            <button type="reset" class="my-red-button my-submit-button">Reset</button>
+                            <button type="reset" id="my-form-reset" class="my-red-button my-submit-button">Reset</button>
                             <div id="dynamicMessage" class="mb-3">
                                 <!-- Dynamic -->
                             </div>
                         </form>
+                    </div>
+                    <div class="selected-item-block col-lg-4">
+                        <h3 id="selected-item-h3" class="text-center my-red-5">Your selected item: </h3>
+                        <div id="selected-item">
+                            <!-- Dynamic -->
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -265,19 +273,17 @@
                     <!-- Footer More From Us Text-->
                     <div class="col-lg-4">
                         <h4 class="text-uppercase mb-4">More from us</h4>
-                        <p class="lead mb-0">
-                            <a class="py-3 px-0 px-lg-3 my-a" href="https://aleksasubasic.github.io/about.html" target="_blank">Author</a>
-                            <br/>
-                            <a class="py-3 px-0 px-lg-3 my-a" href="#">Documentation</a>
-                        </p>
+                        <a class="lead my-a" href="https://aleksasubasic.github.io/about.html" target="_blank">Author</a> <br/>
+                        <a class="lead my-a" href="DokumentacijaSubasicAleksa.pdf" target="_blank">Documentation</a> <br/>
+                        <a class="lead my-a" href="sitemap.xml" target="_blank">Sitemap</a>
                     </div>
                 </div>
             </div>
         </footer>
 
         <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white bg-secondary2">
-            <div class="container"><small>Copyright &copy; Aleksa Subasic 98/20</small></div>
+        <div class="copyright text-center text-white bg-secondary2">
+            <p class="my-pad">Copyright &copy; Aleksa Subasic 98/20</p>
         </div>
 
         <!-- Bootstrap core JS-->
